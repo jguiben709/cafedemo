@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: cafe
+  datasource:
+    url: jdbc:mariadb://localhost:3310/cafe
+    username: usuario
+    password: usuario
+  jpa:
+    hibernate:
+      ddl-auto: update
