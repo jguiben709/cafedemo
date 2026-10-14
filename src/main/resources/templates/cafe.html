@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${cafe.nombre}">Café</title>
+</head>
+<body>
+<h1 th:text="${cafe.nombre}"></h1>
+<ul>
+    <li><b>ID:</b> <span th:text="${cafe.id}"></span></li>
+    <li><b>Origen:</b> <span th:text="${cafe.origen}"></span></li>
+    <li><b>Precio venta:</b> <span th:text="${#numbers.formatDecimal(cafe.precioVenta, 1, 2)}"></span></li>
+    <li><b>Precio compra:</b> <span th:text="${#numbers.formatDecimal(cafe.precioCompra, 1, 2)}"></span></li>
+    <li><b>Descripción:</b> <span th:text="${cafe.descripcion}"></span></li>
+    <li><b>Nivel de amargor:</b> <span th:text="${cafe.nivelAmargor}"></span></li>
+</ul>
+<a th:href="@{/cafes}">Volver al listado</a>
+</body>
+</html>
